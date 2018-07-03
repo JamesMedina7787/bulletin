@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>Bulletin Board</title>
+  </head>
+  <body>
+
+    <a href="post-message.html"><button>Post Message</button></a>
+
+    <% for(i in rows){ %>
+      <fieldset>
+      <label> ID: </label><%=rows[i].dataValues.id %>
+      </fieldset>
+      <fieldset>
+        <label>Name: </label><%= rows[i].dataValues.title %>
+      </fieldset>
+      <fieldset>
+        <label>Message: </label><%= rows[i].dataValues.body %>
+      </fieldset>
+
+  <%  }%>
+
+  </body>
+</html>

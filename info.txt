@@ -1,0 +1,47 @@
+Due Apr 28 by 9:59pm  Points 10 Submitting a website url or a file upload Available Jan 8 at 10pm - May 31 at 9:59pm 5 months
+Bulletin Board Application
+Goal
+Develop a website which can efficiently store and retrieve user submitted messages from a PostgreSQL database.
+
+Assignment
+Back in the late 90's, writing in an online guestbook or message board was the thing to do!
+
+For this assignment, let's recreate this pasttime activity by developing a website that allows people to post messages to a page. A message should consist of a title and a body. The site should have two pages:
+
+The first page shows people a form where they can add a new message.
+The second page shows each of the messages people have posted.
+Make sure there's a way to navigate the site so users can access each page.
+
+Messages must be stored in a postgres database. Create a table called messages, with the following column names and data types:
+
+Column Name	Column Data Type
+id	serial primary key
+title	text
+body	text
+Tips
+Your connection string in the code should appear as follows:
+
+var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/bulletinboard';
+Set an environment variable by opening either ~/.bash_profile for OSX or ~/.bashrc for Linux and adding the line:
+
+export POSTGRES_USER=jon
+export POSTGRES_PASSWORD=mypassword
+After that, restart your terminal to propagate these changes to your shell.
+
+This will allow your instructor to grade your assignments without having to go into your code and change your connection string to his configuration.
+
+Grading Criteria
+The database is named bulletinboard.
+The postgres username must be read from an environment variable named POSTGRES_USER.
+The postgres password (if present) must be read from an environment variable named POSTGRES_PASSWORD
+The table is called messages.
+The messages table consists of an id, title and body column.
+The first page consists of a form where users can add a message.
+The second page displays the submitted messages.
+Submit the assignment in a zipped project folder.
+
+Complete = Meets all grading criteria above.
+
+Incomplete = Does not meet all grading criteria above. Needs improvement or missing submission.
+
+Previous Next
